@@ -1,5 +1,6 @@
 import 'package:drunk_drive/core/styles/app_colors.dart';
 import 'package:drunk_drive/core/styles/app_text_styles.dart';
+import 'package:drunk_drive/views/login/widgets/phone_field.dart';
 import 'package:drunk_drive/widgets/primary_button.dart';
 import 'package:drunk_drive/widgets/privacy_policy_text.dart';
 import 'package:flutter/material.dart';
@@ -38,28 +39,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 SizedBox(height: 20),
 
                 // phone no field
-                TextField(
-                  keyboardType: TextInputType.phone,
-                  decoration: InputDecoration(
-                    hintText: "Phone No",
-                    prefixIcon: Padding(
-                      padding: const EdgeInsets.only(left: 16.0, right: 8.0),
-                      child: Text(
-                        "+1",
-                        style: AppTextStyles.normal.copyWith(
-                          color: AppColors.blackColor,
-                        ),
-                      ),
-                    ),
-                    prefixIconConstraints: BoxConstraints(
-                      minWidth: 0,
-                      minHeight: 0,
-                    ),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(30),
-                    ),
-                  ),
-                ),
+                PhoneField(),
                 SizedBox(height: 52),
                 PrivacyPolicyText(),
                 SizedBox(height: 10),

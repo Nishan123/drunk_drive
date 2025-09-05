@@ -1,8 +1,10 @@
-import 'package:drunk_drive/screens/history/history_details_screen.dart';
-import 'package:drunk_drive/screens/home/home_screen.dart';
-import 'package:drunk_drive/screens/landing_screen.dart';
-import 'package:drunk_drive/screens/login_screen.dart';
-import 'package:drunk_drive/screens/otp_screen.dart';
+import 'package:drunk_drive/views/history/history_details_screen.dart';
+import 'package:drunk_drive/views/history/history_screen.dart';
+import 'package:drunk_drive/views/home/home_screen.dart';
+import 'package:drunk_drive/views/landing/landing_screen.dart';
+import 'package:drunk_drive/views/login/login_screen.dart';
+import 'package:drunk_drive/views/otp/otp_screen.dart';
+import 'package:drunk_drive/views/where_to/where_to_screen.dart';
 import 'package:go_router/go_router.dart';
 
 class RoutingConfigs {
@@ -41,10 +43,25 @@ class RoutingConfigs {
         },
       ),
       GoRoute(
-        path: "/",
+        path: "/historyDetails",
         name: "historyDetails",
         builder: (context, state) {
           return HistoryDetailsScreen();
+        },
+      ),
+      GoRoute(
+        path: "/rideHistory",
+        name: "rideHistory",
+        builder: (context, state) {
+          return HistoryScreen();
+        },
+      ),
+
+      GoRoute(
+        path: "/",
+        name: "whereTo",
+        builder: (context, state) {
+          return WhereToScreen();
         },
       ),
     ],

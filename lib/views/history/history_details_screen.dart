@@ -1,11 +1,10 @@
 import 'package:drunk_drive/core/styles/app_colors.dart';
-import 'package:drunk_drive/screens/history/widgets/action_button.dart';
-import 'package:drunk_drive/screens/history/widgets/custom_divider.dart';
-import 'package:drunk_drive/screens/history/widgets/driver_info_card.dart';
-import 'package:drunk_drive/screens/history/widgets/payment_details.dart';
-import 'package:drunk_drive/screens/history/widgets/ride_info.dart';
-import 'package:drunk_drive/screens/history/widgets/to_from_details_widget,.dart';
-import 'package:drunk_drive/widgets/secondary_button.dart';
+import 'package:drunk_drive/views/history/widgets/action_button.dart';
+import 'package:drunk_drive/views/history/widgets/custom_divider.dart';
+import 'package:drunk_drive/views/history/widgets/driver_info_card.dart';
+import 'package:drunk_drive/views/history/widgets/payment_details.dart';
+import 'package:drunk_drive/views/history/widgets/ride_info.dart';
+import 'package:drunk_drive/views/history/widgets/to_from_details_widget,.dart';
 import 'package:feather_icons/feather_icons.dart';
 import 'package:flutter/material.dart';
 
@@ -101,13 +100,7 @@ class HistoryDetailsScreen extends StatelessWidget {
                       totalAmt: "20",
                       paidAmt: "20",
                     ),
-                    Spacer(),
-                    SecondaryButton(
-                      borderWidth: 1,
-                      text: "Remove History",
-                      borderColor: AppColors.redColor,
-                      onTap: () {},
-                    ),
+                   
                     SizedBox(height: 20),
                   ],
                 ),

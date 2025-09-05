@@ -13,9 +13,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
    final RoutingConfigs routingConfigs =RoutingConfigs();
-
-    
-    
     return MaterialApp.router(
       routeInformationParser: routingConfigs.appRoute.routeInformationParser,
       routeInformationProvider: routingConfigs.appRoute.routeInformationProvider,

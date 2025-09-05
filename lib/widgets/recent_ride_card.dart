@@ -31,7 +31,13 @@ class RecentRideCard extends StatelessWidget {
           SizedBox(
             child: Column(
               spacing: 10,
-              children: [LocationWidget(), LocationWidget(isPickup: false)],
+              children: [
+                LocationWidget(locationName: "Pickup Location"),
+                LocationWidget(
+                  locationName: "Destination Location",
+                  isPickup: false,
+                ),
+              ],
             ),
           ),
           Row(
@@ -64,7 +70,8 @@ class RecentRideCard extends StatelessWidget {
 
 class LocationWidget extends StatelessWidget {
   final bool? isPickup;
-  const LocationWidget({super.key, this.isPickup});
+  final String locationName;
+  const LocationWidget({super.key, this.isPickup, required this.locationName});
 
   @override
   Widget build(BuildContext context) {
@@ -102,7 +109,7 @@ class LocationWidget extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("Pickup Location", style: AppTextStyles.h5),
+            Text(locationName, style: AppTextStyles.h5),
             Text(
               isPickup ?? true ? "Pickup point" : "Destination",
               style: AppTextStyles.normal.copyWith(

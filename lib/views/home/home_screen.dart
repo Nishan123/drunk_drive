@@ -1,10 +1,10 @@
 import 'package:drunk_drive/core/styles/app_colors.dart';
 import 'package:drunk_drive/core/styles/app_text_styles.dart';
-import 'package:drunk_drive/screens/home/widgets/book_ride_container.dart';
-import 'package:drunk_drive/screens/home/widgets/home_app_bar.dart';
+import 'package:drunk_drive/views/home/widgets/book_ride_container.dart';
+import 'package:drunk_drive/views/home/widgets/home_app_bar.dart';
+import 'package:drunk_drive/views/home/widgets/interaction_button.dart';
 import 'package:drunk_drive/widgets/custom_drawer.dart';
 import 'package:drunk_drive/widgets/custom_search_bar.dart';
-import 'package:drunk_drive/screens/home/widgets/interaction_button.dart';
 import 'package:drunk_drive/widgets/recent_ride_card.dart';
 import 'package:flutter/material.dart';
 
@@ -49,7 +49,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 crossAxisCount: 2,
                 crossAxisSpacing: 8,
                 mainAxisSpacing: 8,
-                childAspectRatio: 2.3, // Adjust aspect ratio for better height
+                childAspectRatio: 2.3,
                 physics: NeverScrollableScrollPhysics(),
                 children: [
                   InteractionButton(

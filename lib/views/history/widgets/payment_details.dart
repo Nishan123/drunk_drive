@@ -8,6 +8,7 @@ Widget paymentDetails({
 }) {
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
+    spacing: 8,
     children: [
       Text("Payment Details: ", style: AppTextStyles.h4),
       paymentList(paymentName: "Total Fare", paymentAmount: totalAmt),
@@ -22,6 +23,13 @@ Widget paymentList({
   required String paymentAmount,
 }) {
   return Row(
-    children: [Text(paymentName), Spacer(), Text("CAD $paymentAmount")],
+    children: [
+      Text(
+        paymentName,
+        style: AppTextStyles.normal.copyWith(fontWeight: FontWeight.bold),
+      ),
+      Spacer(),
+      Text("CAD $paymentAmount"),
+    ],
   );
 }
